@@ -25,7 +25,7 @@ class Project {
         $this->dataPath = $dataPath;
         if(is_file($dataPath . "description.yml")) {
             $this->description = yaml_parse_file($dataPath . "description.yml");
-            $this->namespace = $this->description["main"] ?? null;
+            $this->namespace = dirname($this->description["main"]) ?? null;
         }
     }
 
@@ -44,7 +44,8 @@ class Project {
             unset($description["submit"]);
         }
 
-        $description["main"] = $this->namespace = strtolower($description["author"] . "\\" . $description["name"]);
+        $description["main"] = strtolower($description["author"] . "\\" . $description["name"]) . "\\" . $description["name"];
+        $this->namespace = dirname($description["main"]);
 
         yaml_emit_file($this->getDataPath() . "description.yml", $description);
     }
@@ -63,16 +64,14 @@ class Project {
             $mainFile = str_replace("{%$key}", $value, $mainFile);
         }
 
-        @mkdir($exportDir = $this->getDataPath() . "export");
-        @mkdir($authorDir = $exportDir . DIRECTORY_SEPARATOR . strtolower($this->description["author"]));
-        @mkdir($nameDir = $authorDir . DIRECTORY_SEPARATOR . strtolower($this->description["name"]));
+        @mkdir($targetDir = $this->getDataPath() . "export" . DIRECTORY_SEPARATOR . "src" . DIRECTORY_SEPARATOR . strtolower($this->description["author"]) . DIRECTORY_SEPARATOR . strtolower($this->description["name"]),0777, true);
         @yaml_emit_file($this->getDataPath() . "export" . DIRECTORY_SEPARATOR . "plugin.yml", $this->description);
-        @file_put_contents($nameDir . DIRECTORY_SEPARATOR . $this->description["name"] . ".php", $mainFile);
+        @file_put_contents($targetDir . DIRECTORY_SEPARATOR . $this->description["name"] . ".php", $mainFile);
 
         $phar = new \Phar($pharPath = $this->getDataPath() . $this->description["name"] . ".phar");
         $phar->buildFromDirectory($this->getDataPath() . "export");
 
-        header("Content-disposition: attachment;filename=SimpleSpawn.phar");
+        header("Content-disposition: attachment;filename={$this->description["name"]}.phar");
         readfile($pharPath);
     }
 
