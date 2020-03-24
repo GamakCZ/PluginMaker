@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace pluginmaker\builder;
 
+use pluginmaker\builder\base\Link;
+
 /**
  * Class SimplePageBuilder
  * @package pluginmaker
@@ -18,6 +20,8 @@ class SimplePageBuilder {
     public function __construct() {
         $this->headTag = new SimpleTag("head");
         $this->bodyTag = new SimpleTag("body");
+
+        $this->getHead()->addTag(new Link("stylesheet", "assets/css/bootstrap.css"));
     }
 
     /**
