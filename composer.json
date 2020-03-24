@@ -1,0 +1,13 @@
+{
+  "name": "pluginmaker/pluginmaker",
+  "description": "Website software which allows to create plugin for PocketMine without coding",
+  "autoload": {
+    "psr-4": {
+      "": ["src"]
+    }
+  },
+  "require": {
+    "php": ">=7.0.0",
+    "ext-yaml": "*"
+  }
+}

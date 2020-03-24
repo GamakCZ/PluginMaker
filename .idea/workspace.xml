@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="cca7ea8e-ee3c-4733-9ec1-0bff58416972" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
+    <execution>
+      <phar pharPath="$PROJECT_DIR$/composer.phar" interpreterId="a6ab8b1d-c472-47be-9d47-43fab744ed1b" />
+    </execution>
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="PPM" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+        <option value="HTML File" />
+        <option value="CSS File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP">
+    <include_path>
+      <path value="$PROJECT_DIR$/vendor/composer" />
+    </include_path>
+  </component>
+  <component name="ProjectId" id="1QTcDkrgn9Kp5MEd2VUhWLHXhBe" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\JetBrains\PhpstormProjects\PPM" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\JetBrains\PhpstormProjects\PPM" />
+      <recent name="D:\JetBrains\PhpstormProjects\PPM\src\pluginmaker\builder" />
+      <recent name="D:\JetBrains\PhpstormProjects\PPM\src" />
+      <recent name="D:\JetBrains\PhpstormProjects\PPM\old" />
+      <recent name="D:\JetBrains\PhpstormProjects\PPM\editor" />
+    </key>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="cca7ea8e-ee3c-4733-9ec1-0bff58416972" name="Default Changelist" comment="" />
+      <created>1557843750080</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1557843750080</updated>
+      <workItem from="1557843752284" duration="3913000" />
+      <workItem from="1557859696863" duration="3155000" />
+      <workItem from="1557942570675" duration="3051000" />
+      <workItem from="1558031227041" duration="4257000" />
+      <workItem from="1558117217666" duration="641000" />
+      <workItem from="1558210279162" duration="569000" />
+      <workItem from="1567096212542" duration="369000" />
+      <workItem from="1567096584472" duration="7749000" />
+      <workItem from="1567106969412" duration="3269000" />
+      <workItem from="1567160720897" duration="3757000" />
+      <workItem from="1567167401078" duration="4056000" />
+      <workItem from="1567171657597" duration="408000" />
+      <workItem from="1567175544087" duration="2462000" />
+      <workItem from="1567178237052" duration="842000" />
+      <workItem from="1567251663192" duration="314000" />
+      <workItem from="1567797912970" duration="5854000" />
+      <workItem from="1567846967611" duration="8183000" />
+      <workItem from="1567855568130" duration="177000" />
+      <workItem from="1567936414655" duration="2509000" />
+      <workItem from="1567957114456" duration="24000" />
+      <workItem from="1584989743731" duration="7444000" />
+      <workItem from="1585042279112" duration="10338000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="699" y="330" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1585052494587">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="699" y="330" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1585052494587" />
+    <state x="690" y="278" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1585049857598">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="690" y="278" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585049857598" />
+    <state x="744" y="439" width="432" height="242" key="ComposerInitDialogKey" timestamp="1584990484137">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="744" y="439" width="432" height="242" key="ComposerInitDialogKey/0.0.1920.1040@0.0.1920.1040" timestamp="1584990484137" />
+    <state x="859" y="294" key="NewPhpClassDialog" timestamp="1585052507574">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="859" y="294" key="NewPhpClassDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585052507574" />
+    <state x="794" y="451" key="NewPhpFileDialog" timestamp="1584990116599">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="794" y="451" key="NewPhpFileDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1584990116599" />
+    <state x="668" y="347" key="com.intellij.ide.util.TipDialog" timestamp="1585042282468">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="668" y="347" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585042282468" />
+  </component>
+</project>
