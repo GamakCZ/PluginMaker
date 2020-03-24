@@ -4,7 +4,9 @@ declare(strict_types=1);
 
 namespace pluginmaker;
 
+use http\Env;
 use pluginmaker\builder\SimplePageBuilder;
+use pluginmaker\design\Environment;
 use pluginmaker\design\NavBar;
 use pluginmaker\forms\FormData;
 
@@ -22,6 +24,8 @@ class PluginMaker {
     private $pageBuilder;
     /** @var ProjectManager $projectManager */
     private $projectManager;
+    /** @var Environment $environment */
+    private $environment;
 
     public function __construct() {
         self::$instance = $this;
@@ -33,16 +37,18 @@ class PluginMaker {
 
     private function initBase() {
         new NavBar($this);
+        $this->environment = new Environment();
         $this->projectManager = new ProjectManager($this);
     }
 
     private function run() {
         $this->getProjectManager()->loadProject();
+        $this->getPageBuilder()->getBody()->addTag($this->getEnvironment());
 
         $project = $this->getProjectManager()->getProject();
         if(!$project->hasValidDescription()) {
             if(empty($_POST)) {
-                $this->addDescriptionForm($this->getPageBuilder()->getBody());
+                $this->addDescriptionForm($this->getEnvironment());
                 return;
             }
 
@@ -59,8 +65,8 @@ class PluginMaker {
             }
         }
 
-        $this->addExportButton($this->getPageBuilder()->getBody());
-        $this->addNewButton($this->getPageBuilder()->getBody());
+        $this->addExportButton($this->getEnvironment());
+        $this->addNewButton($this->getEnvironment());
     }
 
     public function displayGenerated() {
@@ -93,6 +99,13 @@ class PluginMaker {
      */
     public function getProjectManager(): ProjectManager {
         return $this->projectManager;
+    }
+
+    /**
+     * @return Environment
+     */
+    public function getEnvironment(): Environment {
+        return $this->environment;
     }
 
     /**

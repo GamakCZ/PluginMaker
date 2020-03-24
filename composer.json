@@ -8,6 +8,7 @@
   },
   "require": {
     "php": ">=7.0.0",
-    "ext-yaml": "*"
+    "ext-yaml": "*",
+    "ext-dom": "*"
   }
 }

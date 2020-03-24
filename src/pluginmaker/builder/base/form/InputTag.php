@@ -42,5 +42,6 @@ class InputTag extends SimpleTag {
         }
 
         $this->addTagData(new SimpleTagData("autocomplete", "off"));
+        $this->setCSSClassName("form-control");
     }
 }

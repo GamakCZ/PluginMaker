@@ -8,6 +8,7 @@ use pluginmaker\builder\base\BreakTag;
 use pluginmaker\builder\base\DivTag;
 use pluginmaker\builder\base\form\InputTag;
 use pluginmaker\builder\base\FormTag;
+use pluginmaker\builder\base\HrTag;
 use pluginmaker\builder\SimpleTag;
 use pluginmaker\builder\SimpleTagData;
 
@@ -30,7 +31,7 @@ trait FormData  {
 
         $div = new DivTag();
         $div->addTag(new BreakTag());
-        $div->addTag(new SimpleTag("hr"));
+        $div->addTag(new HrTag());
         $div->addTag($form);
 
         $tag->addTag($div);

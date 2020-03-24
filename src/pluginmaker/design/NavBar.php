@@ -5,8 +5,9 @@ declare(strict_types=1);
 namespace pluginmaker\design;
 
 use pluginmaker\builder\base\DivTag;
+use pluginmaker\builder\base\HrTag;
 use pluginmaker\builder\base\TextTag;
-use pluginmaker\builder\SimpleTag;
+use pluginmaker\builder\SimpleTagData;
 use pluginmaker\PluginMaker;
 use pluginmaker\VersionConstants;
 
@@ -23,8 +24,11 @@ class NavBar {
     public function __construct(PluginMaker $page) {
         $divTag = new DivTag();
         $divTag->addTag(new TextTag("Running PocketMine PluginMaker v" . VersionConstants::PLUGINMAKER_VERSION ));
-        $divTag->addTag(new SimpleTag("hr"));
-        $page->getPageBuilder()->getBody()->addTag(clone $divTag);
+        $divTag->addTag(new HrTag());
+        $divTag->setCSSClassName("navbar");
+        $divTag->addTagData(new SimpleTagData("style", "background-color: #0066ff;margin-bottom: 10px"));
+
+        $page->getPageBuilder()->getBody()->addTag($divTag);
     }
 
 }

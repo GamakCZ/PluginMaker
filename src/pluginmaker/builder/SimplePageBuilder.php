@@ -39,7 +39,11 @@ class SimplePageBuilder {
     }
 
     public function displayFinalHTML() {
-        echo $this->getHead()->toHTML();
-        echo $this->getBody()->toHTML();
+        $doc = new \DOMDocument();
+        $doc->loadHTML($this->getHead()->toHTML() . $this->getBody()->toHTML());
+        $doc->formatOutput = true;
+
+
+        echo $doc->saveXML();
     }
 }
