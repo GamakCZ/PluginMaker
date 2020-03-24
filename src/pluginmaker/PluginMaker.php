@@ -61,8 +61,14 @@ class PluginMaker {
                     break;
                 case "new":
                     $this->getProjectManager()->disableActiveProject();
+                    break;
+                case "action":
+                    $this->getProjectManager()->getProject()->getActionManager()->handleActionForm();
+                    break;
             }
         }
+
+        $this->getProjectManager()->getProject()->loadManagementForms($this->getEnvironment());
 
         $this->addExportButton($this->getEnvironment());
         $this->addNewButton($this->getEnvironment());

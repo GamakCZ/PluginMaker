@@ -28,6 +28,14 @@ class FormTag extends SimpleTag {
 
     /**
      * @param string $text
+     * @param int $size
+     */
+    public function addHeading(string $text, int $size = 3) {
+        $this->addTag(new HeadingTag($text, $size));
+    }
+
+    /**
+     * @param string $text
      */
     public function addText(string $text) {
         $this->addTag(new TextTag($text));
@@ -49,6 +57,7 @@ class FormTag extends SimpleTag {
     public function addDropdown(string $name, array $options) {
         $dropdown = new SimpleTag("select");
         $dropdown->addTagData(new SimpleTagData("name", $name));
+        $dropdown->setCSSClassName("form-control");
 
         foreach ($options as $option) {
             $optionTag = new SimpleTag("option");
@@ -61,6 +70,8 @@ class FormTag extends SimpleTag {
             $dropdown->addTag(new TextTag($option));
             $dropdown->addTag(new BreakTag());
         }
+
+        $this->addTag($dropdown);
     }
 
     /**

@@ -1,0 +1,1 @@
+        $player->getServer()->broadcastMessage({%message});

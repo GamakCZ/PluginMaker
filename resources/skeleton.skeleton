@@ -4,8 +4,12 @@ declare(strict_types=1);
 
 namespace {%namespace};
 
+use pocketmine\Player;
 use pocketmine\plugin\PluginBase;
 use pocketmine\event\Listener;
+use pocketmine\event\player\PlayerJoinEvent;
+use pocketmine\event\player\PlayerQuitEvent;
+use pocketmine\event\entity\EntityLevelChangeEvent;
 
 /**
  * Class {%pluginName}
@@ -17,4 +21,6 @@ class {%pluginName} extends PluginBase implements Listener {
     public function onEnable() {
         $this->getServer()->getPluginManager()->registerEvents($this, $this);
     }
+
+{%customCode}
 }

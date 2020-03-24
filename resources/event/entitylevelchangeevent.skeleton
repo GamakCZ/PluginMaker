@@ -1,0 +1,11 @@
+    /**
+     * @param EntityLevelChangeEvent $event
+     */
+    public function onLevelChange(EntityLevelChangeEvent $event) {
+        $player = $event->getEntity();
+        if(!$player instanceof Player) {
+            return;
+        }
+
+{%actionCode}
+    }

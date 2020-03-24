@@ -4,11 +4,17 @@ declare(strict_types=1);
 
 namespace pluginmaker;
 
+use pluginmaker\action\ActionManager;
+use pluginmaker\builder\SimpleTag;
+
 /**
  * Class Project
  * @package pluginmaker
  */
 class Project {
+
+    /** @var ActionManager $actionManager */
+    private $actionManager;
 
     /** @var string $dataPath */
     private $dataPath;
@@ -27,6 +33,15 @@ class Project {
             $this->description = yaml_parse_file($dataPath . "description.yml");
             $this->namespace = dirname($this->description["main"]) ?? null;
         }
+
+        $this->actionManager = new ActionManager($this);
+    }
+
+    /**
+     * @param SimpleTag $tag
+     */
+    public function loadManagementForms(SimpleTag $tag) {
+        $this->getActionManager()->addActionForm($tag);
     }
 
     /**
@@ -57,7 +72,8 @@ class Project {
 
         $toReplace = [
             "namespace" => $this->namespace,
-            "pluginName" => $this->description["name"]
+            "pluginName" => $this->description["name"],
+            "customCode" => $this->getActionManager()->exportActions()
         ];
 
         foreach ($toReplace as $key => $value) {
@@ -80,5 +96,12 @@ class Project {
      */
     public function getDataPath(): string {
         return $this->dataPath;
+    }
+
+    /**
+     * @return ActionManager
+     */
+    public function getActionManager(): ActionManager {
+        return $this->actionManager;
     }
 }

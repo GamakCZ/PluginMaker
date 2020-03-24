@@ -7,17 +7,19 @@ namespace pluginmaker\builder\base;
 use pluginmaker\builder\SimpleTag;
 
 /**
- * Class TextTag
+ * Class HeadingTag
  * @package pluginmaker\builder\base
  */
-class TextTag extends SimpleTag {
+class HeadingTag extends SimpleTag {
 
     /**
-     * TextTag constructor.
+     * HeadingTag constructor.
      * @param string $text
+     * @param int $size
      */
-    public function __construct(string $text) {
+    public function __construct(string $text, int $size) {
+        parent::__construct("h$size");
+
         $this->content = $text;
-        parent::__construct("a"); // I know, it's link xdd
     }
 }

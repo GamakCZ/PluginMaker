@@ -2,15 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cca7ea8e-ee3c-4733-9ec1-0bff58416972" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/PPM.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/deployment.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/action/broadcastmessage.skeleton" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/action/sendmessage.skeleton" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/event/entitylevelchangeevent.skeleton" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/event/playerjoinevent.skeleton" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/event/playerquitevent.skeleton" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pluginmaker/action/Action.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pluginmaker/action/ActionForms.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pluginmaker/action/ActionManager.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pluginmaker/builder/base/HeadingTag.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/skeleton.skeleton" beforeDir="false" afterPath="$PROJECT_DIR$/resources/skeleton.skeleton" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pluginmaker/PluginMaker.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/pluginmaker/PluginMaker.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pluginmaker/Project.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/pluginmaker/Project.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pluginmaker/builder/base/FormTag.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/pluginmaker/builder/base/FormTag.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pluginmaker/builder/base/TextTag.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/pluginmaker/builder/base/TextTag.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -125,14 +133,14 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="744" y="439" width="432" height="242" key="ComposerInitDialogKey/0.0.1920.1040@0.0.1920.1040" timestamp="1584990484137" />
-    <state x="859" y="294" key="NewPhpClassDialog" timestamp="1585058972952">
+    <state x="859" y="294" key="NewPhpClassDialog" timestamp="1585063336332">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="859" y="294" key="NewPhpClassDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585058972952" />
-    <state x="794" y="451" key="NewPhpFileDialog" timestamp="1584990116599">
+    <state x="859" y="294" key="NewPhpClassDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585063336332" />
+    <state x="794" y="451" key="NewPhpFileDialog" timestamp="1585062044340">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="794" y="451" key="NewPhpFileDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1584990116599" />
+    <state x="794" y="451" key="NewPhpFileDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585062044340" />
     <state x="668" y="347" key="com.intellij.ide.util.TipDialog" timestamp="1585042282468">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
