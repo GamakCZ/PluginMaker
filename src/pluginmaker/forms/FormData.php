@@ -59,31 +59,32 @@ trait FormData  {
         $pluginDescriptionForm->addText("Plugin name:");
         $pluginDescriptionForm->addBreak();
         $pluginDescriptionForm->addInput(new InputTag("name"));
-        $pluginDescriptionForm->addBreak(2);
+        $pluginDescriptionForm->addBreak();
 
         $pluginDescriptionForm->addText("Plugin description:");
         $pluginDescriptionForm->addBreak();
         $pluginDescriptionForm->addInput(new InputTag("description"));
-        $pluginDescriptionForm->addBreak(2);
+        $pluginDescriptionForm->addBreak();
 
         $pluginDescriptionForm->addText("Plugin api:");
         $pluginDescriptionForm->addBreak();
         $apiInput = new InputTag("api", InputTag::TYPE_TEXT, "3.0.0", "3.0.0");
         //$apiInput->addTagData(new SimpleTagData("disabled"));
         $pluginDescriptionForm->addInput($apiInput);
-        $pluginDescriptionForm->addBreak(2);
+        $pluginDescriptionForm->addBreak();
 
         $pluginDescriptionForm->addText("Plugin author:");
         $pluginDescriptionForm->addBreak();
         $pluginDescriptionForm->addInput(new InputTag("author"));
-        $pluginDescriptionForm->addBreak(2);
+        $pluginDescriptionForm->addBreak();
 
         $pluginDescriptionForm->addText("Plugin version:");
         $pluginDescriptionForm->addBreak();
-        $pluginDescriptionForm->addInput(new InputTag("version"));
-        $pluginDescriptionForm->addBreak(2);
+        $versionInput = new InputTag("version", InputTag::TYPE_TEXT, null, "1.0.0");
+        $pluginDescriptionForm->addInput($versionInput);
+        $pluginDescriptionForm->addBreak();
 
-        $pluginDescriptionForm->addSubmit();
+        $pluginDescriptionForm->addSubmit("Next step");
 
         $tag->addTag(new DivTag($pluginDescriptionForm));
     }

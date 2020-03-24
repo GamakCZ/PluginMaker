@@ -83,6 +83,7 @@ class ProjectManager {
         setcookie(self::COOKIE_PREFIX . "projectId", "", -1);
 
         header("Refresh:0");
+        exit();
     }
 
 

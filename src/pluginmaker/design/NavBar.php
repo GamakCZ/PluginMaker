@@ -22,8 +22,11 @@ class NavBar {
      * @param PluginMaker $page
      */
     public function __construct(PluginMaker $page) {
+        $text = new TextTag("Running PocketMine PluginMaker v" . VersionConstants::PLUGINMAKER_VERSION);
+        $text->addTagData(new SimpleTagData("style", "color: white"));
+
         $divTag = new DivTag();
-        $divTag->addTag(new TextTag("Running PocketMine PluginMaker v" . VersionConstants::PLUGINMAKER_VERSION ));
+        $divTag->addTag($text);
         $divTag->addTag(new HrTag());
         $divTag->setCSSClassName("navbar");
         $divTag->addTagData(new SimpleTagData("style", "background-color: #0066ff;margin-bottom: 10px"));

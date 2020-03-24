@@ -22,6 +22,7 @@ class SimplePageBuilder {
         $this->bodyTag = new SimpleTag("body");
 
         $this->getHead()->addTag(new Link("stylesheet", "assets/css/bootstrap.css"));
+        $this->getHead()->addTag(new Link("stylesheet", "assets/css/Footer-Basic.css"));
     }
 
     /**
@@ -39,11 +40,13 @@ class SimplePageBuilder {
     }
 
     public function displayFinalHTML() {
-        $doc = new \DOMDocument();
+        /*$doc = new \DOMDocument();
         $doc->loadHTML($this->getHead()->toHTML() . $this->getBody()->toHTML());
         $doc->formatOutput = true;
 
 
-        echo $doc->saveXML();
+        echo $doc->saveXML();*/
+
+        echo $this->getHead()->toHTML() . $this->getBody()->toHTML();
     }
 }

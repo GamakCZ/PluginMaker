@@ -6,6 +6,7 @@ namespace pluginmaker;
 
 use pluginmaker\builder\SimplePageBuilder;
 use pluginmaker\design\Environment;
+use pluginmaker\design\Footer;
 use pluginmaker\design\NavBar;
 use pluginmaker\forms\FormData;
 
@@ -29,8 +30,12 @@ class PluginMaker {
     public function __construct() {
         self::$instance = $this;
         $this->pageBuilder = new SimplePageBuilder();
+
         $this->initBase();
         $this->run();
+
+        new Footer($this->getEnvironment());
+
         $this->displayGenerated();
     }
 

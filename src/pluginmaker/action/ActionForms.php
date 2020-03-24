@@ -17,6 +17,9 @@ use pluginmaker\builder\SimpleTagData;
  */
 trait ActionForms {
 
+    /**
+     * @param SimpleTag $tag
+     */
     public function addActionForm(SimpleTag $tag) {
         $form = new FormTag();
 
@@ -30,17 +33,17 @@ trait ActionForms {
         $form->addText("Target event:");
         $form->addBreak();
         $form->addDropdown("event", ["Player join", "Player quit", "Player teleport (between levels)"]);
-        $form->addBreak(2);
+        $form->addBreak();
 
         $form->addText("Target action:");
         $form->addBreak();
         $form->addDropdown("target-action", ["Send message to player", "Broadcast message"]);
-        $form->addBreak(2);
+        $form->addBreak();
 
         $form->addText("Your message:");
         $form->addBreak();
         $form->addInput(new InputTag("message", InputTag::TYPE_TEXT, "You can use {%player} to get player's name."));
-        $form->addBreak(2);
+        $form->addBreak();
 
         $form->addSubmit("Add the action");
 
