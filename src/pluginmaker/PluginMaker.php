@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace pluginmaker;
 
-use http\Env;
 use pluginmaker\builder\SimplePageBuilder;
 use pluginmaker\design\Environment;
 use pluginmaker\design\NavBar;
