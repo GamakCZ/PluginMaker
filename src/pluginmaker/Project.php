@@ -31,7 +31,7 @@ class Project {
         $this->dataPath = $dataPath;
         if(is_file($dataPath . "description.yml")) {
             $this->description = yaml_parse_file($dataPath . "description.yml");
-            $this->namespace = dirname($this->description["main"]) ?? null;
+            $this->namespace = (implode("\\", array_slice(explode("\\", $this->description["main"]), 0, 2))) ?? null;
         }
 
         $this->actionManager = new ActionManager($this);
@@ -60,7 +60,7 @@ class Project {
         }
 
         $description["main"] = strtolower($description["author"] . "\\" . $description["name"]) . "\\" . $description["name"];
-        $this->namespace = dirname($description["main"]);
+        $this->namespace = implode("\\", array_slice(explode("\\", $description["main"]), 0, 2));
 
         yaml_emit_file($this->getDataPath() . "description.yml", $description);
     }
@@ -84,11 +84,14 @@ class Project {
         @yaml_emit_file($this->getDataPath() . "export" . DIRECTORY_SEPARATOR . "plugin.yml", $this->description);
         @file_put_contents($targetDir . DIRECTORY_SEPARATOR . $this->description["name"] . ".php", $mainFile);
 
-        $phar = new \Phar($pharPath = $this->getDataPath() . $this->description["name"] . ".phar");
+        $phar = new \Phar($pharPath = $this->getDataPath() . $this->description["name"] . ".phar.plugin");
         $phar->buildFromDirectory($this->getDataPath() . "export");
 
-        header("Content-disposition: attachment;filename={$this->description["name"]}.phar");
-        readfile($pharPath);
+        // Header doesn't allow to download phar without broken signature ._.
+        $script = new SimpleTag("script");
+        $script->content = "const a = document.createElement('a');a.href = '/download.php';a.setAttribute('download', '" . $this->description["name"] . ".phar');a.click();";
+
+        PluginMaker::getInstance()->getPageBuilder()->getHead()->addTag($script);
     }
 
     /**
